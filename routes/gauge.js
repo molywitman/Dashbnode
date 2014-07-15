@@ -55,10 +55,7 @@ router.put('/:gaugeNumber', function(req, res) {
     GaugeToUpdate.save(function (err) {
       if (err) return res.send(500, err);
       res.send(201, GaugeToUpdate);
-    }).catch(function(err){
-      res.send(500, err);
-    });
-
+    })
   });
 });
 module.exports = router;

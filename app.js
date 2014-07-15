@@ -50,6 +50,9 @@ if (app.get('env') === 'development') {
         });
     });
 }
+process.nextTick(function() {
+  console.log('nextTick callback');
+});
 
 // production error handler
 // no stacktraces leaked to user
